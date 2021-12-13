@@ -12,7 +12,7 @@ import { retr } from './commands/retr';
 import { quit } from './commands/quit';
 import { currentUsr } from './commands/user';
 import { fileName } from './commands/stor';
-import { cmd_val } from './commands/stor'
+import { cmd_val } from './commands/stor';
 let commands = JSON.parse(fs.readFileSync('commands.json'));
 commands.USER = user;
 commands.PASS = pass;
@@ -27,7 +27,6 @@ commands.QUIT = quit;
 export let currentUser = "";
 let cmd = "";
 export let file = "";
-let wstream;
 
 export function launch(host, port) {
     const server = createServer({ host: host }, (c) => {
